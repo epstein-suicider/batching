@@ -64,5 +64,5 @@ takes 1 arg, being the *element to put in the batch*<br/>
 only thing it does is put the element in the batch and start it,<br/>
 summon just sounded like a way cooler name. wake works too<br/>
 ```js
-batch.summon(<anything>); //adds anything to batch and starts it if it's stopped
+batch.summon(anything); //adds anything to batch and starts it if it's stopped
 ```
