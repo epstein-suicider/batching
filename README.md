@@ -81,7 +81,5 @@ batch.push(anything);
 batch.emplace(anything);
 ```
 
-# why does the documentation have
-# types in argseven though you're
-# coding in javascript?
+# why does the documentation have types in args even though you're coding in javascript?
 lol, idk<br/>
