@@ -3,7 +3,7 @@
 
 module.exports =
 {
-	create: function(slave, delay)
+	create(slave, delay)
 	{		
 		//private
 		this.slave = slave;
@@ -16,7 +16,7 @@ module.exports =
 		
 		this.elements = [];
 		
-		testificate = function(obj, err = null)
+		continuer = function(obj, err = undefined)
 		{
 			obj.elements.shift();
 			if (err)
@@ -34,34 +34,25 @@ module.exports =
 			else
 			{
 				let empty = obj.elements.length == 0;
-				
-				if (empty)
-					console.log("done processing batch");
+					
+				if (obj.delay == 0)
+					obj.continue_batch();
 				else
 				{
-					console.log("element processed");
-					
-					if (obj.delay == 0)
-						obj.continue_batch();
-					else
+					setTimeout(function()
 					{
-						setTimeout(function()
-						{
-							obj.continue_batch();
-						}, obj.delay);
-					}
+						obj.continue_batch();
+					}, obj.delay);
 				}
 			}
 		}
 			
 		this.process_next = function(key)
 		{
-			console.log("processing element...");
-			
 			let thisbk = this;
 			this.slave(this.elements[key], function(err)
 			{
-				testificate(thisbk, err);
+				continuer(thisbk, err);
 			});
 		};
 		
