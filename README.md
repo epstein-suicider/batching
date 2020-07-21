@@ -49,7 +49,7 @@ to add a wiki or anything of the like, so here's the functions and classes<br/>
 <br/>
 ## functions
 ### create
-args: processor: func(obj, continuer)<br/>
+args: processor: func(obj: any, continuer: function)<br/>
 <br/>
 simple function that creates and returns a batch<br/>
 argument is a function that gets called for every<br/>
@@ -80,3 +80,8 @@ batch.wake(anything);
 batch.push(anything);
 batch.emplace(anything);
 ```
+
+# why does the documentation have
+# types in argseven though you're
+# coding in javascript?
+lol, idk<br/>
