@@ -12,9 +12,12 @@ module.exports =
         this.process_next = function(key)
         {
             const this_backup = this;
-            this.processor(this.elements[key], function(err)
+            this.processor(this.elements[key][0], function(err)
             {
                 ((obj, err)=>{
+					if (obj.elements.key[1]) //if a callback function was pushed
+						obj.elements[key][1](); //call it
+
                     obj.elements.shift();
                     if (err)
                     {

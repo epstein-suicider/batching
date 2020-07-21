@@ -1,6 +1,6 @@
 # batching
 a simple javascript batching library<br/>
-used for systematically processing elements returned from async/callback functions<br/>
+used for systematically processing elements retrieved from async/callback functions<br/>
 made it for myself, didn't realise it existed<br/>
 <br/>
 *only tested on node.js, not sure if working on browsers*<br/>
@@ -65,9 +65,11 @@ let batch = batches.create(function(obj, continuer) { continuer(); }); //always 
 this class is basically just used to summon the batch<br/>
 only has 1 function:<br/>
 ### summon (aliases: wake, push, emplace)
+args: element: any, [callback: function]<br/>
 the only 'public' function meant to be used in the class.<br/>
-takes 1 arg, being the *element to put in the batch*<br/>
-only thing it does is put the element in the batch and start it,<br/>
+takes an being the *element to put in the batch*, and optionally<br/>
+a callback to call whenever the element gets processed. only<br/>
+thing this does is put the element in the batch and start it,<br/>
 summon just sounded like a way cooler name than "push_and_start"<br/>
 i decided to add more aliases in case a different name is preferred<br/>
 ```js
