@@ -66,6 +66,7 @@ this class is basically just used to summon the batch<br/>
 only has 1 function:<br/>
 ### summon (aliases: wake, push, emplace)
 args: element: any, [callback: function]<br/>
+<br/>
 the only 'public' function meant to be used in the class.<br/>
 takes an being the *element to put in the batch*, and optionally<br/>
 a callback to call whenever the element gets processed. only<br/>
