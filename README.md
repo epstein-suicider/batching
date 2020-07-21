@@ -58,7 +58,7 @@ element in the batch, which has 2 args, being the<br/>
 **have to call** after finishing any work on the<br/>
 element and to move forward in the batch's list<br/>
 ```js
-let batch = batches.create(function(object, continue) { continue(); }, 1000); //always continues with delay of 1 second
+let batch = batches.create(function(obj, continuer) { continuer(); }); //always continues
 ```
 
 ## 'batch' class
