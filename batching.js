@@ -3,7 +3,7 @@
 
 module.exports =
 {
-	create(slave, delay)
+	create: function(slave, delay)
 	{		
 		//private
 		this.slave = slave;
