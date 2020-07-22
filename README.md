@@ -65,7 +65,7 @@ let batch = batches.create(function(obj, continuer) { continuer(); }); //always 
 this class is basically just used to summon the batch<br/>
 only has 1 function:<br/>
 ### summon (aliases: wake, push, emplace)
-args: element: any, [callback: function]<br/>
+args: element: any, [callback: func(obj: any)]<br/>
 <br/>
 the only 'public' function meant to be used in the class.<br/>
 takes an being the *element to put in the batch*, and optionally<br/>

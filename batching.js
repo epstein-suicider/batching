@@ -16,7 +16,7 @@ module.exports =
             {
                 ((obj, err)=>{
 					if (obj.elements.key[1]) //if a callback function was pushed
-						obj.elements[key][1](); //call it
+						obj.elements[key][1](obj.elements[key][0]); //call it
 
                     obj.elements.shift();
                     if (err)
