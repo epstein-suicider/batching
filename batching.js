@@ -36,7 +36,7 @@ module.exports =
         this.summon = function(object, callback = null)
         {
             this.elements.push([object, callback]);
-            if (this.elements.length == 0)
+            if (this.elements.length == 1)
                 this.continue_batch();
         }
         this.wake = this.summon;
